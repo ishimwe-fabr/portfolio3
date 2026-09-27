@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://ishimwefabrice001.netlify.app/sitemap.xml
