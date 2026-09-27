@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Ishimwe Fabrice — Software Developer in Rwanda</title>
+<meta name="description" content="Get in touch with Ishimwe Fabrice, a software developer based in Rwanda, to talk about your website, web app, mobile app or backend project.">
+<meta name="author" content="Ishimwe Fabrice">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact — Ishimwe Fabrice">
+<meta property="og:description" content="Have an idea or project? Get in touch with Ishimwe Fabrice, software developer based in Rwanda.">
+<meta property="og:image" content="profile.png">
+<meta property="og:locale" content="en_US">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23050B1F%22/><text x=%2250%22 y=%2266%22 font-size=%2255%22 text-anchor=%22middle%22 fill=%22%2318B8FF%22 font-family=%22Arial%22>if</text></svg>">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  /* ============================================================
+     DESIGN SYSTEM — CSS CUSTOM PROPERTIES (shared with index.html)
+     ============================================================ */
+  :root{
+    --bg:#050B1F;
+    --bg-secondary:#08142E;
+    --surface:#0D1B3A;
+    --surface-2:#122349;
+    --primary:#18B8FF;
+    --primary-soft:rgba(24,184,255,0.14);
+    --secondary:#6366F1;
+    --text:#F8FAFC;
+    --muted:#94A3B8;
+    --border:rgba(255,255,255,0.08);
+    --border-strong:rgba(255,255,255,0.16);
+    --danger:#FF6B6B;
+    --danger-soft:rgba(255,107,107,0.12);
+    --success:#28C840;
+    --success-soft:rgba(40,200,64,0.12);
+    --radius-sm:8px;
+    --radius-md:14px;
+    --radius-lg:22px;
+    --font-display:'Space Grotesk', sans-serif;
+    --font-body:'Inter', sans-serif;
+    --ease:cubic-bezier(.22,.61,.36,1);
+    --nav-h:76px;
+    --container:1180px;
+  }
+
+  /* ============================================================
+     RESET
+     ============================================================ */
+  *,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--font-body);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; text-decoration:none; }
+  ul{ list-style:none; }
+  button{ font:inherit; cursor:pointer; border:none; background:none; color:inherit; }
+  h1,h2,h3,h4{ font-family:var(--font-display); line-height:1.15; font-weight:600; }
+  ::selection{ background:var(--primary); color:var(--bg); }
+
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible{
+    outline:2px solid var(--primary);
+    outline-offset:3px;
+    border-radius:4px;
+  }
+
+  .container{
+    width:100%;
+    max-width:var(--container);
+    margin-inline:auto;
+    padding-inline:24px;
+  }
+
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    background-image:
+      linear-gradient(var(--border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size:64px 64px;
+    -webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+            mask-image:radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+    opacity:0.5;
+  }
+  body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-3;
+    background:
+      radial-gradient(circle at 15% 8%, rgba(99,102,241,0.16), transparent 45%),
+      radial-gradient(circle at 85% 18%, rgba(24,184,255,0.14), transparent 40%),
+      var(--bg);
+  }
+
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:0.92rem;
+    color:var(--muted);
+    font-weight:500;
+    letter-spacing:0.04em;
+  }
+  .eyebrow .dot{
+    width:7px; height:7px; border-radius:50%;
+    background:var(--primary);
+    box-shadow:0 0 0 4px var(--primary-soft);
+  }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:14px 26px;
+    border-radius:var(--radius-sm);
+    font-family:var(--font-body);
+    font-weight:600;
+    font-size:0.98rem;
+    transition:transform .35s var(--ease), box-shadow .35s var(--ease), background .35s var(--ease), border-color .35s var(--ease);
+    white-space:nowrap;
+  }
+  .btn-primary{
+    background:linear-gradient(135deg, var(--primary), var(--secondary));
+    color:#031022;
+    box-shadow:0 8px 24px -8px rgba(24,184,255,0.55);
+  }
+  .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 14px 30px -8px rgba(24,184,255,0.7); }
+  .btn-primary:disabled{ opacity:0.7; cursor:not-allowed; transform:none; }
+  .btn-ghost{
+    border:1px solid var(--border-strong);
+    color:var(--text);
+    background:rgba(255,255,255,0.02);
+  }
+  .btn-ghost:hover{ border-color:var(--primary); background:var(--primary-soft); transform:translateY(-2px); }
+  .btn-block{ width:100%; }
+
+  /* ============================================================
+     NAVIGATION
+     ============================================================ */
+  .navbar{
+    position:fixed;
+    top:0; left:0; right:0;
+    z-index:100;
+    height:var(--nav-h);
+    display:flex;
+    align-items:center;
+    border-bottom:1px solid transparent;
+    transition:background .4s var(--ease), border-color .4s var(--ease), height .3s var(--ease);
+  }
+  .navbar.scrolled{
+    height:64px;
+    background:rgba(5,11,31,0.72);
+    backdrop-filter:blur(16px) saturate(140%);
+    -webkit-backdrop-filter:blur(16px) saturate(140%);
+    border-bottom-color:var(--border);
+  }
+  .nav-inner{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+  }
+  .logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:1.15rem;
+    letter-spacing:-0.02em;
+  }
+  .logo-mark{
+    width:36px; height:36px;
+    border-radius:10px;
+    background:linear-gradient(135deg, var(--primary), var(--secondary));
+    display:flex; align-items:center; justify-content:center;
+    color:#031022;
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:1rem;
+  }
+  .nav-links{
+    display:flex;
+    align-items:center;
+    gap:6px;
+  }
+  .nav-links a{
+    position:relative;
+    padding:9px 16px;
+    font-size:0.95rem;
+    font-weight:500;
+    color:var(--muted);
+    border-radius:8px;
+    transition:color .25s var(--ease), background .25s var(--ease);
+  }
+  .nav-links a:hover{ color:var(--text); background:rgba(255,255,255,0.04); }
+  .nav-links a.active{ color:var(--text); }
+  .nav-links a.active::after{
+    content:"";
+    position:absolute;
+    left:16px; right:16px; bottom:4px;
+    height:2px;
+    border-radius:2px;
+    background:var(--primary);
+  }
+  .nav-right{ display:flex; align-items:center; gap:14px; }
+  .nav-cta{ display:inline-flex; }
+
+  .hamburger{
+    display:none;
+    width:42px; height:42px;
+    border-radius:10px;
+    border:1px solid var(--border-strong);
+    position:relative;
+    flex-shrink:0;
+  }
+  .hamburger span{
+    position:absolute; left:11px; right:11px; height:2px;
+    background:var(--text); border-radius:2px;
+    transition:transform .3s var(--ease), opacity .3s var(--ease), top .3s var(--ease);
+  }
+  .hamburger span:nth-child(1){ top:15px; }
+  .hamburger span:nth-child(2){ top:20px; }
+  .hamburger span:nth-child(3){ top:25px; }
+  .hamburger[aria-expanded="true"] span:nth-child(1){ top:20px; transform:rotate(45deg); }
+  .hamburger[aria-expanded="true"] span:nth-child(2){ opacity:0; }
+  .hamburger[aria-expanded="true"] span:nth-child(3){ top:20px; transform:rotate(-45deg); }
+
+  .mobile-nav{
+    position:fixed;
+    top:var(--nav-h); left:0; right:0; bottom:0;
+    background:rgba(5,11,31,0.98);
+    backdrop-filter:blur(20px);
+    z-index:99;
+    display:flex;
+    flex-direction:column;
+    padding:32px 28px;
+    gap:6px;
+    transform:translateX(100%);
+    opacity:0;
+    transition:transform .45s var(--ease), opacity .4s var(--ease);
+  }
+  .mobile-nav.open{ transform:translateX(0); opacity:1; }
+  .mobile-nav a{
+    font-family:var(--font-display);
+    font-size:1.6rem;
+    font-weight:500;
+    padding:14px 4px;
+    border-bottom:1px solid var(--border);
+    color:var(--text);
+  }
+  .mobile-nav a.active{ color:var(--primary); }
+  .mobile-nav .btn{ margin-top:24px; align-self:flex-start; }
+
+  /* ============================================================
+     SECTION SHELL
+     ============================================================ */
+  section{ padding:110px 0; position:relative; }
+
+  /* ============================================================
+     CONTACT HERO
+     ============================================================ */
+  .contact-hero{
+    padding:calc(var(--nav-h) + 76px) 0 40px;
+    text-align:center;
+  }
+  .contact-hero .eyebrow{ justify-content:center; margin-bottom:20px; }
+  .contact-hero-inner{ max-width:680px; margin-inline:auto; }
+  .contact-hero h1{
+    font-size:clamp(2.2rem, 4.4vw, 3.2rem);
+    letter-spacing:-0.02em;
+    margin-bottom:18px;
+  }
+  .contact-hero p{
+    color:var(--muted);
+    font-size:1.08rem;
+    max-width:520px;
+    margin-inline:auto;
+  }
+  .reveal-seq > *{
+    opacity:0;
+    transform:translateY(16px);
+    animation:heroIn .8s var(--ease) forwards;
+  }
+  .reveal-seq > *:nth-child(1){ animation-delay:.05s; }
+  .reveal-seq > *:nth-child(2){ animation-delay:.15s; }
+  .reveal-seq > *:nth-child(3){ animation-delay:.25s; }
+  @keyframes heroIn{ to{ opacity:1; transform:translateY(0); } }
+
+  /* ============================================================
+     CONTACT GRID
+     ============================================================ */
+  .contact-section{ padding-top:10px; }
+  .contact-grid{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:40px;
+    align-items:start;
+  }
+
+  /* -- left column: info cards -- */
+  .contact-info{ display:flex; flex-direction:column; gap:16px; }
+  .info-card{
+    display:flex;
+    align-items:flex-start;
+    gap:16px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius-md);
+    padding:22px;
+    transition:border-color .3s var(--ease), transform .3s var(--ease);
+  }
+  .info-card:hover{ border-color:var(--border-strong); transform:translateY(-3px); }
+  .info-icon{
+    width:44px; height:44px;
+    min-width:44px;
+    border-radius:12px;
+    background:var(--primary-soft);
+    color:var(--primary);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .info-icon svg{ width:20px; height:20px; }
+  .info-card h3{
+    font-family:var(--font-body);
+    font-size:0.82rem;
+    color:var(--muted);
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    margin-bottom:6px;
+  }
+  .info-card a, .info-card p{
+    font-size:1rem;
+    font-weight:500;
+    word-break:break-word;
+  }
+  .info-card a:hover{ color:var(--primary); }
+
+  .availability-note{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:var(--success-soft);
+    border:1px solid rgba(40,200,64,0.3);
+    border-radius:var(--radius-md);
+    padding:18px 20px;
+    margin-top:6px;
+  }
+  .availability-note .pulse-dot{
+    width:9px; height:9px; border-radius:50%;
+    background:var(--success);
+    box-shadow:0 0 0 0 rgba(40,200,64,0.6);
+    animation:pulse 2.2s infinite;
+    flex-shrink:0;
+  }
+  @keyframes pulse{
+    0%{ box-shadow:0 0 0 0 rgba(40,200,64,0.55); }
+    70%{ box-shadow:0 0 0 9px rgba(40,200,64,0); }
+    100%{ box-shadow:0 0 0 0 rgba(40,200,64,0); }
+  }
+  .availability-note p{ font-size:0.92rem; color:var(--text); font-weight:500; }
+
+  /* -- right column: form -- */
+  .contact-form-card{
+    background:var(--surface);
+    border:1px solid var(--border-strong);
+    border-radius:var(--radius-lg);
+    padding:38px;
+    position:relative;
+    overflow:hidden;
+  }
+  .contact-form-card::before{
+    content:"";
+    position:absolute; inset:0;
+    background:radial-gradient(circle at 100% 0%, rgba(24,184,255,0.12), transparent 55%);
+    pointer-events:none;
+  }
+  .form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    position:relative;
+  }
+  .field{ display:flex; flex-direction:column; gap:8px; }
+  .field.full{ grid-column:1 / -1; }
+  .field label{
+    font-size:0.86rem;
+    font-weight:600;
+    color:var(--text);
+  }
+  .field label .req{ color:var(--primary); }
+  .field input,
+  .field select,
+  .field textarea{
+    width:100%;
+    background:var(--bg-secondary);
+    border:1px solid var(--border-strong);
+    border-radius:var(--radius-sm);
+    padding:13px 16px;
+    color:var(--text);
+    font-family:var(--font-body);
+    font-size:0.96rem;
+    transition:border-color .25s var(--ease), box-shadow .25s var(--ease);
+  }
+  .field input::placeholder,
+  .field textarea::placeholder{ color:var(--muted); opacity:0.75; }
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus{
+    outline:none;
+    border-color:var(--primary);
+    box-shadow:0 0 0 3px var(--primary-soft);
+  }
+  .field select{ cursor:pointer; }
+  .field textarea{ resize:vertical; min-height:130px; line-height:1.5; }
+
+  .field.error input,
+  .field.error select,
+  .field.error textarea{
+    border-color:var(--danger);
+    box-shadow:0 0 0 3px var(--danger-soft);
+  }
+  .field-error-msg{
+    font-size:0.82rem;
+    color:var(--danger);
+    min-height:1em;
+    display:none;
+  }
+  .field.error .field-error-msg{ display:block; }
+
+  .char-count{
+    font-size:0.78rem;
+    color:var(--muted);
+    text-align:right;
+  }
+
+  .form-submit-row{ margin-top:8px; grid-column:1 / -1; }
+  .form-note{
+    font-size:0.82rem;
+    color:var(--muted);
+    margin-top:14px;
+    line-height:1.55;
+  }
+  .form-note strong{ color:var(--text); font-weight:600; }
+
+  .form-success{
+    display:none;
+    align-items:flex-start;
+    gap:14px;
+    background:var(--success-soft);
+    border:1px solid rgba(40,200,64,0.35);
+    border-radius:var(--radius-md);
+    padding:18px 20px;
+    margin-top:20px;
+    grid-column:1 / -1;
+    animation:fadeQuote .4s var(--ease);
+  }
+  @keyframes fadeQuote{ from{ opacity:0; transform:translateY(6px);} to{ opacity:1; transform:translateY(0);} }
+  .form-success.show{ display:flex; }
+  .form-success .success-icon{
+    width:34px; height:34px; min-width:34px;
+    border-radius:50%;
+    background:var(--success);
+    color:#031022;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .form-success .success-icon svg{ width:18px; height:18px; }
+  .form-success strong{ display:block; margin-bottom:3px; font-size:0.98rem; }
+  .form-success span{ color:var(--muted); font-size:0.88rem; }
+
+  /* ============================================================
+     SOCIAL SECTION
+     ============================================================ */
+  .social-section{ text-align:center; }
+  .social-section h2{ font-size:clamp(1.8rem, 3vw, 2.3rem); margin-bottom:12px; }
+  .social-section > .container > p{ color:var(--muted); max-width:420px; margin-inline:auto; margin-bottom:44px; }
+  .social-grid{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+  }
+  .social-card{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius-md);
+    padding:20px 26px;
+    min-width:210px;
+    transition:border-color .3s var(--ease), transform .3s var(--ease), background .3s var(--ease);
+  }
+  .social-card:hover{ border-color:var(--primary); background:var(--primary-soft); transform:translateY(-4px); }
+  .social-card .social-icon{
+    width:42px; height:42px; min-width:42px;
+    border-radius:10px;
+    background:var(--bg-secondary);
+    border:1px solid var(--border-strong);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .social-card .social-icon svg{ width:20px; height:20px; }
+  .social-card div{ text-align:left; }
+  .social-card strong{ display:block; font-size:0.95rem; }
+  .social-card span{ color:var(--muted); font-size:0.82rem; }
+
+  /* ============================================================
+     FINAL CTA
+     ============================================================ */
+  .cta-banner{
+    background:var(--surface);
+    border:1px solid var(--border-strong);
+    border-radius:var(--radius-lg);
+    padding:64px 48px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .cta-banner::before{
+    content:"";
+    position:absolute; inset:0;
+    background:radial-gradient(circle at 50% 0%, rgba(24,184,255,0.18), transparent 60%);
+  }
+  .cta-banner h2{ font-size:clamp(1.8rem,3.4vw,2.5rem); margin-bottom:16px; position:relative; }
+  .cta-banner p{ color:var(--muted); max-width:480px; margin-inline:auto; margin-bottom:30px; position:relative; }
+  .cta-actions{ display:flex; gap:14px; justify-content:center; flex-wrap:wrap; position:relative; }
+
+  /* ============================================================
+     FOOTER
+     ============================================================ */
+  footer{
+    border-top:1px solid var(--border);
+    padding:70px 0 28px;
+    background:var(--bg-secondary);
+  }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1.4fr 0.8fr 1fr;
+    gap:48px;
+    margin-bottom:52px;
+  }
+  .footer-brand .logo{ margin-bottom:16px; }
+  .footer-brand p{ color:var(--muted); font-size:0.94rem; max-width:320px; margin-bottom:22px; }
+  .footer-socials{ display:flex; gap:10px; }
+  .footer-socials a{
+    width:38px; height:38px;
+    border:1px solid var(--border-strong);
+    border-radius:9px;
+    display:flex; align-items:center; justify-content:center;
+    transition:border-color .25s var(--ease), color .25s var(--ease), transform .25s var(--ease);
+  }
+  .footer-socials a:hover{ border-color:var(--primary); color:var(--primary); transform:translateY(-3px); }
+  .footer-socials svg{ width:17px; height:17px; }
+  .footer h4{
+    font-family:var(--font-body);
+    font-size:0.95rem;
+    font-weight:600;
+    margin-bottom:20px;
+  }
+  .footer-links li{ margin-bottom:12px; }
+  .footer-links a{ color:var(--muted); font-size:0.92rem; transition:color .2s var(--ease); }
+  .footer-links a:hover{ color:var(--primary); }
+  .footer-links a.active{ color:var(--primary); }
+  .footer-contact li{ margin-bottom:14px; font-size:0.92rem; }
+  .footer-contact span{ display:block; color:var(--muted); font-size:0.78rem; margin-bottom:3px; }
+  .footer-contact a:hover{ color:var(--primary); }
+  .footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:12px;
+    padding-top:26px;
+    border-top:1px solid var(--border);
+    color:var(--muted);
+    font-size:0.84rem;
+  }
+  .footer-bottom .built{ display:flex; align-items:center; gap:6px; }
+
+  /* ============================================================
+     RESPONSIVE
+     ============================================================ */
+  @media (max-width:1024px){
+    .contact-grid{ grid-template-columns:1fr; }
+    .footer-grid{ grid-template-columns:1fr 1fr; }
+  }
+  @media (max-width:860px){
+    .nav-links{ display:none; }
+    .nav-cta{ display:none; }
+    .hamburger{ display:block; }
+  }
+  @media (max-width:680px){
+    section{ padding:76px 0; }
+    .contact-hero{ padding:calc(var(--nav-h) + 48px) 0 32px; }
+    .contact-form-card{ padding:26px 20px; }
+    .form-grid{ grid-template-columns:1fr; }
+    .social-grid{ flex-direction:column; align-items:stretch; }
+    .social-card{ min-width:0; }
+    .cta-banner{ padding:44px 24px; }
+    .footer-grid{ grid-template-columns:1fr; gap:36px; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo" aria-label="Ishimwe Fabrice — home">
+      <span class="logo-mark" aria-hidden="true">if</span>
+      Ishimwe Fabrice
+    </a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="experience.html">Experience</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html" class="active" aria-current="page">Contact</a>
+    </nav>
+
+    <div class="nav-right">
+      <a href="contact.html" class="btn btn-primary nav-cta">Let's Talk</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="skills.html">Skills</a>
+  <a href="projects.html">Projects</a>
+  <a href="experience.html">Experience</a>
+  <a href="reviews.html">Reviews</a>
+  <a href="contact.html" class="active" aria-current="page">Contact</a>
+  <a href="contact.html" class="btn btn-primary">Let's Talk</a>
+</nav>
+
+<main>
+
+  <!-- ============================================================
+       CONTACT HERO
+       ============================================================ -->
+  <section class="contact-hero">
+    <div class="container contact-hero-inner reveal-seq">
+      <p class="eyebrow"><span class="dot" aria-hidden="true"></span>GET IN TOUCH</p>
+      <h1>Let's Build Something.</h1>
+      <p>Have an idea, a project or a problem that needs a digital solution? I'd love to hear about it.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT GRID — INFO + FORM
+       ============================================================ -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- LEFT: contact info -->
+        <div class="contact-info">
+
+          <div class="info-card">
+            <span class="info-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            </span>
+            <div>
+              <h3>Email</h3>
+              <a href="mailto:ishimwefabrice883@gmail.com">ishimwefabrice883@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <span class="info-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            <div>
+              <h3>Phone</h3>
+              <a href="tel:+250796684022">0796684022</a>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <span class="info-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            </span>
+            <div>
+              <h3>Instagram</h3>
+              <a href="https://instagram.com/" target="_blank" rel="noopener">ish fabr</a>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <span class="info-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <div>
+              <h3>Location</h3>
+              <p>Rwanda 🇷🇼</p>
+            </div>
+          </div>
+
+          <div class="availability-note">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <p>Available for freelance projects and development opportunities.</p>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: contact form -->
+        <div class="contact-form-card">
+          <form id="contactForm" class="form-grid" novalidate>
+
+            <div class="field full" id="field-name">
+              <label for="fullName">Full Name <span class="req">*</span></label>
+              <input type="text" id="fullName" name="fullName" placeholder="Your full name" autocomplete="name">
+              <span class="field-error-msg" id="error-name">Please enter your full name.</span>
+            </div>
+
+            <div class="field full" id="field-email">
+              <label for="email">Email Address <span class="req">*</span></label>
+              <input type="text" id="email" name="email" placeholder="you@example.com" autocomplete="email">
+              <span class="field-error-msg" id="error-email">Please enter a valid email address.</span>
+            </div>
+
+            <div class="field full" id="field-project">
+              <label for="projectType">Project Type <span class="req">*</span></label>
+              <select id="projectType" name="projectType">
+                <option value="" selected disabled>Select a project type</option>
+                <option value="Website">Website</option>
+                <option value="Web Application">Web Application</option>
+                <option value="Mobile Application">Mobile Application</option>
+                <option value="Backend/API">Backend / API</option>
+                <option value="Other">Other</option>
+              </select>
+              <span class="field-error-msg" id="error-project">Please select a project type.</span>
+            </div>
+
+            <div class="field full" id="field-message">
+              <label for="message">Message <span class="req">*</span></label>
+              <textarea id="message" name="message" placeholder="Tell me a bit about your idea or project..." minlength="20"></textarea>
+              <div class="char-count"><span id="charCount">0</span> / 20 characters minimum</div>
+              <span class="field-error-msg" id="error-message">Please write at least 20 characters.</span>
+            </div>
+
+            <div class="form-submit-row">
+              <button type="submit" class="btn btn-primary btn-block" id="submitBtn">Send Message</button>
+              <p class="form-note">
+                <strong>Note:</strong> This form currently has no backend connected, so messages are not sent to a server yet. Once validated, it's ready to be wired up to an email service or API. Until then, please reach out directly via email or phone above.
+              </p>
+            </div>
+
+            <div class="form-success" id="formSuccess" role="status">
+              <span class="success-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+              </span>
+              <div>
+                <strong>Thanks! Your message is ready to be sent.</strong>
+                <span>A backend or email service can be connected here later to deliver it automatically.</span>
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SOCIAL SECTION
+       ============================================================ -->
+  <section class="social-section">
+    <div class="container">
+      <h2>Find me online</h2>
+      <p>The easiest ways to reach me or see more of my work.</p>
+
+      <div class="social-grid">
+
+        <a class="social-card" href="https://github.com/" target="_blank" rel="noopener">
+          <span class="social-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.72-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.36 1.12 2.94.85.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.32.1-2.75 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.43.2 2.49.1 2.75.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+          </span>
+          <div>
+            <strong>GitHub</strong>
+            <span>Code &amp; repositories</span>
+          </div>
+        </a>
+
+        <a class="social-card" href="https://linkedin.com/" target="_blank" rel="noopener">
+          <span class="social-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.9 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.25h4V23h-4V8.25zM8.5 8.25h3.83v2.02h.05c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.67 4.8 6.14V23h-4v-6.75c0-1.61-.03-3.68-2.24-3.68-2.25 0-2.59 1.76-2.59 3.57V23h-4V8.25z"/></svg>
+          </span>
+          <div>
+            <strong>LinkedIn</strong>
+            <span>Professional profile</span>
+          </div>
+        </a>
+
+        <a class="social-card" href="https://instagram.com/" target="_blank" rel="noopener">
+          <span class="social-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </span>
+          <div>
+            <strong>Instagram</strong>
+            <span>ish fabr</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FINAL CTA
+       ============================================================ -->
+  <section class="final-cta">
+    <div class="container">
+      <div class="cta-banner">
+        <h2>Let's turn your idea into something real.</h2>
+        <p>Whether it's a website, an app, or an API — send a message and let's talk about how to build it.</p>
+        <div class="cta-actions">
+          <a href="mailto:ishimwefabrice883@gmail.com" class="btn btn-primary">Email Me Directly</a>
+          <a href="tel:+250796684022" class="btn btn-ghost">Call 0796 684 022</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="Ishimwe Fabrice — home">
+          <span class="logo-mark" aria-hidden="true">if</span>
+          Ishimwe Fabrice
+        </a>
+        <p>Software developer based in Rwanda, building fast and reliable web products for clients around the world.</p>
+        <div class="footer-socials">
+          <a href="https://instagram.com/" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+          <a href="https://github.com/" aria-label="GitHub" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.72-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.36 1.12 2.94.85.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.32.1-2.75 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.43.2 2.49.1 2.75.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+          </a>
+          <a href="https://linkedin.com/" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.9 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.25h4V23h-4V8.25zM8.5 8.25h3.83v2.02h.05c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.67 4.8 6.14V23h-4v-6.75c0-1.61-.03-3.68-2.24-3.68-2.25 0-2.59 1.76-2.59 3.57V23h-4V8.25z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick links</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Get in touch</h4>
+        <ul class="footer-contact footer-links">
+          <li><span>Email</span><a href="mailto:ishimwefabrice883@gmail.com">ishimwefabrice883@gmail.com</a></li>
+          <li><span>Phone</span><a href="tel:+250796684022">0796 684 022</a></li>
+          <li><span>Instagram</span><a href="https://instagram.com/" target="_blank" rel="noopener">ish fabr</a></li>
+          <li><span>Location</span>Rwanda 🇷🇼</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Ishimwe Fabrice. All rights reserved.</span>
+      <span class="built">Built with HTML, CSS &amp; JavaScript</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* ============================================================
+     NAVBAR SCROLL STATE
+     ============================================================ */
+  const navbar = document.getElementById('navbar');
+  const onScroll = () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 12);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ============================================================
+     MOBILE NAV TOGGLE
+     ============================================================ */
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+
+  function closeMobileNav(){
+    mobileNav.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('aria-label', 'Open menu');
+    document.body.style.overflow = '';
+  }
+  function openMobileNav(){
+    mobileNav.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    hamburger.setAttribute('aria-label', 'Close menu');
+    document.body.style.overflow = 'hidden';
+  }
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileNav.classList.contains('open');
+    isOpen ? closeMobileNav() : openMobileNav();
+  });
+  mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMobileNav);
+  });
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape') closeMobileNav();
+  });
+
+  /* ============================================================
+     FOOTER YEAR
+     ============================================================ */
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* ============================================================
+     CONTACT FORM — CLIENT-SIDE VALIDATION
+     No backend exists yet: on success we simply show a confirmation
+     state and never claim the message was actually transmitted.
+     ============================================================ */
+  (function(){
+    const form = document.getElementById('contactForm');
+    const nameInput = document.getElementById('fullName');
+    const emailInput = document.getElementById('email');
+    const projectSelect = document.getElementById('projectType');
+    const messageInput = document.getElementById('message');
+    const charCount = document.getElementById('charCount');
+    const successBox = document.getElementById('formSuccess');
+    const submitBtn = document.getElementById('submitBtn');
+
+    const MIN_MESSAGE_LENGTH = 20;
+    const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    function setError(fieldId, hasError){
+      const field = document.getElementById(fieldId);
+      field.classList.toggle('error', hasError);
+    }
+
+    function validateName(){
+      const ok = nameInput.value.trim().length >= 2;
+      setError('field-name', !ok);
+      return ok;
+    }
+    function validateEmail(){
+      const ok = EMAIL_RE.test(emailInput.value.trim());
+      setError('field-email', !ok);
+      return ok;
+    }
+    function validateProject(){
+      const ok = projectSelect.value.trim().length > 0;
+      setError('field-project', !ok);
+      return ok;
+    }
+    function validateMessage(){
+      const ok = messageInput.value.trim().length >= MIN_MESSAGE_LENGTH;
+      setError('field-message', !ok);
+      return ok;
+    }
+
+    messageInput.addEventListener('input', () => {
+      const len = messageInput.value.trim().length;
+      charCount.textContent = len;
+      if(messageInput.classList.contains('is-touched')) validateMessage();
+    });
+
+    /* live re-validation once a field has been touched/blurred once */
+    [
+      [nameInput, validateName],
+      [emailInput, validateEmail],
+      [projectSelect, validateProject],
+      [messageInput, validateMessage]
+    ].forEach(([el, validator]) => {
+      el.addEventListener('blur', () => {
+        el.classList.add('is-touched');
+        validator();
+      });
+      el.addEventListener('input', () => {
+        if(el.classList.contains('is-touched')) validator();
+      });
+      el.addEventListener('change', () => {
+        el.classList.add('is-touched');
+        validator();
+      });
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      successBox.classList.remove('show');
+
+      const validName = validateName();
+      const validEmail = validateEmail();
+      const validProject = validateProject();
+      const validMessage = validateMessage();
+
+      const allValid = validName && validEmail && validProject && validMessage;
+
+      if(!allValid){
+        const firstInvalid = form.querySelector('.field.error');
+        if(firstInvalid){
+          firstInvalid.scrollIntoView({ behavior:'smooth', block:'center' });
+          const control = firstInvalid.querySelector('input, select, textarea');
+          if(control) control.focus();
+        }
+        return;
+      }
+
+      /* No backend is connected yet — do not claim this was sent
+         anywhere. Just confirm the message is validated and ready. */
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Message Ready ✓';
+      successBox.classList.add('show');
+      successBox.scrollIntoView({ behavior:'smooth', block:'center' });
+
+      setTimeout(() => {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+      }, 3000);
+    });
+  })();
+</script>
+
+</body>
+</html>
